@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la Série</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Voir plus</h1>
+    </header>
+    <main>
+        <div class="serie-details">
+            <img src="{{ result['image'] }}" alt="{{ result['title'] }}">
+            <h2>{{ result['title'] }}</h2>
+            {% if result['synopsis'] %}
+                <p>{{ result['synopsis'] }}</p>
+            {% else %}
+                <p>Aucun synopsis disponible</p>
+            {% endif %}
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Site de recherche de série</p>
+    </footer>
+</body>
+</html>

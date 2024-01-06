@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    min-height: 100vh;
+    background-color: #141414; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte blanc */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Menu, Title, Search Bar */
+    align-items: center;
+}
+
+#menu {
+    text-align: left;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 20;
+    margin: 10px;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 15px;
+
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #141414;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#search-bar {
+    text-align: right;
+}
+
+#search-input {
+    padding: 10px;
+    background-color: #333; /* Couleur de fond pour la barre de recherche */
+    color: #fff; /* Couleur du texte de la barre de recherche */
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.series-item {
+    background-color: #333; /* Couleur de fond pour chaque élément de série */
+    color: #fff; /* Couleur du texte pour chaque élément de série */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.series-item h2 {
+    margin-top: 0;
+}
+
+/* Ajoutez ces styles pour la grille et les images */
+.series-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.series-item {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.series-item img{
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out; /* Effet de transition sur la transformation */
+}
+
+.series-item img:hover {
+    transform: scale(1.1); /* Zoom de 10% lors du survol de la souris */
+    position: relative;
+}
+
+.serie-details {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+}
+
+.serie-details img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px; /* Marge entre l'image et le titre */
+}
+
+.serie-details h2 {
+    text-align: center; /* Centrer horizontalement */
+}
+
+.serie-details p {
+    flex-grow: 1; /* Remplir l'espace disponible à droite */
+    text-align: right; /* Aligner le texte à droite */
+}

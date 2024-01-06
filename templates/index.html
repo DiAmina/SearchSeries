@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de Sous-titres</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Déconnexion</a></li>
+            </ul>
+        </div>
+        <h1>Recherche de Sous-titres</h1>
+        <form method="get" action="/search-subtitles">
+            <select id="language" name="language" class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                <option selected disabled>Choisir une langue</option>
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+            </select>
+            <label for="keywords">Mots-clés (séparés par des espaces):</label>
+            <input type="text" id="keywords" name="keywords" required>
+            <!--<button type="submit">Rechercher</button>-->
+        </form>
+    </header>
+    <br>
+    <br>
+    <main>
+        <section class="search-results">
+            <div class="series-list">
+                {% for result in results %}
+                    <a href="/see-more/{{ result['id'] }}" class="series-item">
+                        <img src="{{ (result['image']) }}" alt="{{ result['title'] }}">
+                        <h2>{{ result['title'] | title}}</h2>
+                        <p>{{ result['id'] }}</p>
+                        <!-- Ajoutez ici d'autres informations sur la série du genre si je veux liker ...-->
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Site de recherche de série</p>
+    </footer>
+</body>
+</html>
