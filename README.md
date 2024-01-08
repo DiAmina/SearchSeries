@@ -1,3 +1,5 @@
+<img  style="float: center; " alt="logo barre de recherche" src="./STATIC/images/moteur-de-recherche.png">
+
 # SearchSeries
 L'aboutissement du projet est une application web interactive qui permet aux utilisateurs de rechercher des séries TV, d'accéder à des détails approfondis sur chaque série, et de recevoir des recommandations personnalisées.
 
